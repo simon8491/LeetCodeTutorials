@@ -1,4 +1,4 @@
-class SortByParity {
+class SortArrayByParity {
     public int[] sortArrayByParity(int[] nums) {
         if (nums.length < 2) 
         return nums;
