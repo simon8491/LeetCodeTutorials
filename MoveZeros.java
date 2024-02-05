@@ -1,4 +1,4 @@
-public class Solution {
+class Solution {
     
     public void moveZeros(int[] nums) {
         int j = 0;
