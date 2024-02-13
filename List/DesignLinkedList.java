@@ -1,5 +1,6 @@
+
 class ListNode {
-    int val;   // number or another value storeed in the node
+    int val;   // number or another value stored in the node
     ListNode next;  // following node after this one
     
     public ListNode(int val) {    // constructor
