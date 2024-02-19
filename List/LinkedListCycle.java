@@ -15,7 +15,7 @@ class LinkedListCycle {
         }
         ListNode slowPointer = head, fastPointer = head;
 
-        while (fastPointer != null && fastPointer.next != null) {  // Find the meeting point using Floyd's Tortoise and Hare algorithm
+        while (fastPointer != null && fastPointer.next != null) {  // Find the meeting point using Floyd's algorithm (Tortoise and Hare)
             slowPointer = slowPointer.next;
             fastPointer = fastPointer.next.next;
             
