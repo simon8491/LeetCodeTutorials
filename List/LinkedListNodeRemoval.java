@@ -14,7 +14,7 @@ class LinkedListNodeRemoval {
         ListNode pointA = head;
         ListNode pointB = head;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {   // to make a gap between pointers
             pointA = pointA.next;
         }
         if(pointA == null) {    // in case the list is shroter than 2 nodes
