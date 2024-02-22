@@ -1,4 +1,3 @@
-
 class ListNode {
     int val;   // number or another value stored in the node
     ListNode next;  // following node after this one
@@ -9,7 +8,7 @@ class ListNode {
 }
 
 class MyLinkedList {
-    private ListNode head;
+    ListNode head;
 
     public MyLinkedList() {
         this.head = null;
@@ -60,9 +59,9 @@ class MyLinkedList {
         }
 
         ListNode newNode = new ListNode(val);  // new node for this task
-        ListNode current = head;           // declare it as head ecause it starts to iterate from the beginning
+        ListNode current = head;    // declare it as head because it starts to iterate from the beginning
 
-        for (int i = 0; i < index - 1 && current != null; i++) {   // iterate until index - 1
+        for (int i = 0; i < index - 1 && current != null; i++) {   // iterate until index is -1
             current = current.next;
         }
         if (current == null) {return;}
@@ -75,18 +74,17 @@ class MyLinkedList {
         if (index < 0) {return;}
         if (index == 0) {
             if (head != null) {
-                head = head.next; // replace the firste node (index 0) by the next one
+                head = head.next; // replace the first node (index 0) by the next one
             }
             return;
         }
-        ListNode current = head;    //
-
+        ListNode current = head;
         for (int i = 0; i < index - 1 && current != null; i++) {  // iterate over linkedlist until node at specified index found
             current = current.next;
         }
         if (current == null || current.next == null) {
             return;
         }
-        current.next = current.next.next;   // delete node by by rearanging pointers
+        current.next = current.next.next;   // delete node by rearanging pointers
     }
 }
