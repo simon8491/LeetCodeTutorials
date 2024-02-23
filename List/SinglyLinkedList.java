@@ -7,10 +7,10 @@ class ListNode {
     }
 }
 
-class MyLinkedList {
+class SinglyLinkedList {
     ListNode head;
 
-    public MyLinkedList() {
+    public SinglyLinkedList() {
         this.head = null;
     }
     
