@@ -9,7 +9,7 @@ class ListNode {
  
 class MergeTwoLists {
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode merged = new ListNode(0);
+        ListNode merged = new ListNode(0);  //for storing the value of each head in merged list
         ListNode current = merged;
 
         while (list1 != null && list2 != null) {
