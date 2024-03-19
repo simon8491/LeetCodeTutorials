@@ -14,21 +14,21 @@ class CopyRandomList {
     public Node copyRandomList(Node head) {
         if (head == null) return null;
     //1.Initialization and Interweaving:
-        Node curr = head;
-        while (curr != null) {  //Traverse the original list.
+        Node current = head;
+        while (current != null) {  //Traverse the original list.
             //For each node, create a corresponding new node and place it between the current node and the current node's next.
-            Node newNode = new Node(curr.val);
+            Node newNode = new Node(current.val);
             // A->A'->B->B'...
-            curr.next = newNode;
-            curr = newNode.next;
+            current.next = newNode;
+            current = newNode.next;
         }
     //2.Setting Random Pointers:
-        curr = head;
-        while (curr != null) {  //Traverse the interweaved list.
-            if (curr.random != null) {  //For each old node, set its corresponding new node's random pointer.
-                curr.next.random = curr.random.next;
+        current = head;
+        while (current != null) {  //Traverse the interweaved list.
+            if (current.random != null) {  //For each old node, set its corresponding new node's random pointer.
+                current.next.random = current.random.next;
             }
-            curr = curr.next != null ? curr.next.next : null;
+            current = current.next != null ? current.next.next : null;
         }
         //3.Separating Lists:
         Node oldHead = head;
