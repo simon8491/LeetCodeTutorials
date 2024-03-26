@@ -16,7 +16,7 @@ class SpiralOrder {
             for (int i = column; i <= vBorder; i++) {
                 result.add(matrix[row][i]);
             }
-            row++;
+            row++; 
             for (int j = row; j <= hBorder; j++) {
                 result.add(matrix[j][vBorder]);
             }
