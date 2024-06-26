@@ -6,6 +6,7 @@ class MyHashSet {
     //list of the lists to prevent against collision; list interface for using java list functions
     private LinkedList<Integer>[] buckets;
 
+    @SuppressWarnings("unchecked")
     public MyHashSet() {    //constructor
         buckets = new LinkedList[SIZE];   //initializing new array list with null values
         for (int i = 0; i < SIZE; i++) {
