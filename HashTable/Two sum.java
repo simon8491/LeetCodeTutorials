@@ -5,9 +5,9 @@ class Solution {
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> sum = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            target -= nums[i];
-            if (sum.containsKey(target)) {
-                return new int[]{sum.get(target), i};
+            int complement = target - nums[i];
+            if (sum.containsKey(complement)) {
+                return new int[]{sum.get(complement), i};
             }
             sum.put(i, nums[i]);
         }
