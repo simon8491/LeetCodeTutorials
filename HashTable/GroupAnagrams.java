@@ -11,7 +11,7 @@ class Solution {
         List<List<String>> outList = new ArrayList<>(); //output list of grouped anagrams
 
         for (String word : strs) {                  //iterate through the strs array
-            char[] chars = word.toCharArray();      //convert strings from strs array to cahrs to be able to sort
+            char[] chars = word.toCharArray();      //convert strings from strs array to chars to be able to sort
             Arrays.sort(chars);
             String key = new String(chars);         //sorted chars as a key for hash map
 
